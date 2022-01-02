@@ -1,9 +1,14 @@
 import { createReducer } from "../../libs/redux-toolkit.esm.js"
-import { bookmarkUpdatedAction, deleteBookmarkAction, newBookmarkAction } from "../control/CRUDControl.js";
+import { 
+    bookmarkUpdatedAction, 
+    deleteBookmarkAction, 
+    newBookmarkAction,
+    clearBookmarkAction,
+} from "../control/CRUDControl.js";
 
 const initialState = {
     list: [],
-    bookmark:{}
+    bookmark:{ label:"", link:""}
 }
 
 const removeBookmarkWithId = (list, id) => {
@@ -16,6 +21,8 @@ export const bookmarks = createReducer(initialState, (builder) => {
     }).addCase(newBookmarkAction, (state, { payload }) => {
         state.bookmark["id"] = payload;
         state.list = state.list.concat(state.bookmark);
+    }).addCase(clearBookmarkAction, (state) => {
+        state.bookmark = initialState.bookmark;
     }).addCase(deleteBookmarkAction, (state, { payload }) => {
         state.list = removeBookmarkWithId(state.list,payload);
     });

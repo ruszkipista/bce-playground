@@ -2922,3 +2922,4 @@ usageStatistics();
 Router.NavigationTrigger = {POPSTATE, CLICK};
 
 export { Resolver, Router };
+//# sourceMappingURL=vaadin-router.js.map
