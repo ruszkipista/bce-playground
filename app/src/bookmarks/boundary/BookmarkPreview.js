@@ -1,7 +1,7 @@
 import BElement from "../../BElement.js";
 import { html } from "../../libs/lit-html.js";
 
-class Preview extends BElement {
+class BookmarkPreview extends BElement {
 
     extractState({ bookmarks }) {
         return bookmarks;
@@ -15,4 +15,4 @@ class Preview extends BElement {
         `;
     }
 }
-customElements.define('b-preview',Preview);
+customElements.define('b-bookmarkpreview',BookmarkPreview);
