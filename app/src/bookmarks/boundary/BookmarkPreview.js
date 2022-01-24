@@ -3,14 +3,16 @@ import { html } from "../../libs/lit-html.js";
 
 class BookmarkPreview extends BElement {
 
-    extractState({ bookmarks }) {
-        return bookmarks;
+    extractState({ bookmarks : { bookmark } }) {
+        return bookmark;
     }
+    
     view() {
-        const { bookmark: { label,link }  } = this.state;
         return html`
         <div>
-            bookmark: <a href="${link}">${label}</a> (${link})
+            bookmark: 
+            <a href="${this.state.link}">${this.state.label}</a>
+            (${this.state.link})
         </div>
         `;
     }

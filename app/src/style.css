@@ -52,7 +52,7 @@ nav{
     height: 80vh;
 }
 
-b-preview{
+b-bookmarkpreview{
     padding-top: 1rem;
     padding-bottom: 1rem;
     grid-area: view;
@@ -60,19 +60,20 @@ b-preview{
     flex-direction: column;
     align-items: flex-start;
 }
-b-add form{
+b-bookmarkadd form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-b-list{
+b-bookmarklist{
     width: 80%;
     padding-top: 10%;
 }
+
 li{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 30%;
+    width: 60%;
 }
